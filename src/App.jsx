@@ -9,6 +9,7 @@ import PublicExplorer from './components/PublicExplorer'
 import ShareManager from './components/ShareManager'
 import SharedFiles from './components/SharedFiles'
 import ArrowAnimation from './components/ArrowAnimation'
+import ChatBot from './components/ChatBot'
 import './App.css'
 
 // Contract ABI
@@ -345,6 +346,9 @@ function App() {
           {showDragon && (
             <ArrowAnimation direction={dragonDirection} />
           )}
+          
+          {/* AI Chatbot */}
+          <ChatBot />
         </>
       )}
     </div>
