@@ -8,6 +8,7 @@ const SharedFiles = ({ contract, account }) => {
   const [viewingAddress, setViewingAddress] = useState('')
   const [inputAddress, setInputAddress] = useState('')
   const [currentOwner, setCurrentOwner] = useState('')
+  const [searchTag, setSearchTag] = useState('')
 
   const formatFileSize = (bytes) => {
     if (bytes === 0) return '0 Bytes'
@@ -44,7 +45,6 @@ const SharedFiles = ({ contract, account }) => {
 
     setLoading(true)
     try {
-      // Use getUserFiles to get files from the specified address
       const fileData = await contract.getUserFiles(inputAddress)
       
       const formattedFiles = fileData.map((file, index) => ({
@@ -64,6 +64,7 @@ const SharedFiles = ({ contract, account }) => {
       setSharedFiles(formattedFiles)
       setViewingAddress(inputAddress)
       setCurrentOwner(inputAddress)
+      setSearchTag('') // Reset search when loading new files
     } catch (error) {
       console.error('Error fetching shared files:', error)
       if (error.message.includes('Access denied')) {
@@ -82,7 +83,16 @@ const SharedFiles = ({ contract, account }) => {
     setViewingAddress('')
     setCurrentOwner('')
     setInputAddress('')
+    setSearchTag('')
   }
+
+  // Filter files based on search tag
+  const filteredFiles = sharedFiles.filter(file =>
+    searchTag.trim() === '' || 
+    (file.tags && file.tags.some(tag => 
+      tag.toLowerCase().includes(searchTag.toLowerCase())
+    ))
+  )
 
   return (
     <div className="shared-files">
@@ -139,6 +149,18 @@ const SharedFiles = ({ contract, account }) => {
         </div>
       )}
 
+      {viewingAddress && (
+        <div className="search-controls">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search by tag..."
+            value={searchTag}
+            onChange={(e) => setSearchTag(e.target.value)}
+          />
+        </div>
+      )}
+
       {loading ? (
         <div className="loading-shared">
           <div className="quantum-loader">
@@ -150,8 +172,8 @@ const SharedFiles = ({ contract, account }) => {
         </div>
       ) : (
         <div className="files-grid">
-          {sharedFiles.length > 0 ? (
-            sharedFiles.map((file) => (
+          {filteredFiles.length > 0 ? (
+            filteredFiles.map((file) => (
               <div key={file.id} className="file-card">
                 <div className="file-header">
                   <div className="file-type-info">
@@ -266,7 +288,7 @@ const SharedFiles = ({ contract, account }) => {
                     download={file.fileName}
                     className="action-btn download-btn"
                   >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <svg width="16" height="16" viewBox="0 0 24, 24" fill="none">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2"/>
                       <polyline points="7,10 12,15 17,10" stroke="currentColor" strokeWidth="2"/>
                       <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2"/>
@@ -279,9 +301,12 @@ const SharedFiles = ({ contract, account }) => {
           ) : viewingAddress ? (
             <div className="no-shared-files">
               <div className="no-shared-icon">📂</div>
-              <h3>No accessible files</h3>
+              <h3>{searchTag ? 'No files match the search tag' : 'No accessible files'}</h3>
               <p>
-                This user hasn't shared any files with you, or they don't have any files uploaded yet.
+                {searchTag 
+                  ? `No files found with tag "${searchTag}". Try a different tag.`
+                  : 'This user hasn\'t shared any files with you, or they don\'t have any files uploaded yet.'
+                }
               </p>
             </div>
           ) : (

@@ -61,7 +61,7 @@
   backdrop-filter: blur(10px);
 }
 
-.address-input {
+.address-input, .search-input {
   flex: 1;
   padding: 16px 20px;
   background: rgba(0, 0, 0, 0.3);
@@ -73,15 +73,26 @@
   transition: all 0.3s ease;
 }
 
-.address-input:focus {
+.address-input:focus, .search-input:focus {
   outline: none;
   border-color: #ffd700;
   background: rgba(255, 215, 0, 0.05);
   box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
 }
 
-.address-input::placeholder {
+.address-input::placeholder, .search-input::placeholder {
   color: #666;
+}
+
+.search-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding: 16px 24px;
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .view-shared-btn {
@@ -468,7 +479,7 @@
     gap: 16px;
   }
   
-  .access-controls {
+  .access-controls, .search-controls {
     flex-direction: column;
   }
   
