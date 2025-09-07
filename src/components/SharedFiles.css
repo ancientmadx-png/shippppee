@@ -481,9 +481,118 @@
   
   .access-controls, .search-controls {
     flex-direction: column;
+    gap: 12px;
   }
   
   .files-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .shared-files h2 {
+    font-size: 1.8rem;
+  }
+  
+  .shared-description {
+    font-size: 1rem;
+  }
+  
+  .address-input,
+  .search-input {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+  
+  .view-shared-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+  
+  .current-viewing {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .file-content {
+    height: 160px;
+  }
+  
+  .file-actions {
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .action-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .shared-files {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+  
+  .shared-files h2 {
+    font-size: 1.6rem;
+  }
+  
+  .access-controls,
+  .search-controls {
+    padding: 16px;
+  }
+  
+  .address-input,
+  .search-input {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .view-shared-btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+  
+  .current-viewing {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  
+  .viewing-address {
+    font-size: 0.85rem;
+  }
+  
+  .clear-view-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .file-header {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .file-content {
+    height: 140px;
+  }
+  
+  .file-info {
+    padding: 16px;
+  }
+  
+  .file-title {
+    font-size: 1rem;
+  }
+  
+  .file-actions {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 }

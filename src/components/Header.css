@@ -17,6 +17,8 @@
   margin: 0 auto;
   min-height: 80px;
   padding: 0.5rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .logo-section {
@@ -76,6 +78,7 @@
   border-radius: 16px;
   border: 1px solid rgba(255, 215, 0, 0.1);
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-tab {
@@ -215,4 +218,126 @@
 .logout-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255, 99, 71, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 20px;
+  }
+  
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .nav-tab {
+    padding: 10px 16px;
+  }
+  
+  .tab-label {
+    display: none;
+  }
+  
+  .logout-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 15px;
+  }
+  
+  .header-content {
+    min-height: 70px;
+    gap: 0.5rem;
+  }
+  
+  .logo-section h1 {
+    font-size: 1.6rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-tabs {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    order: initial;
+    margin-top: 0;
+  }
+  
+  .nav-tab {
+    padding: 12px 16px;
+  }
+  
+  .account-section {
+    gap: 8px;
+  }
+  
+  .address-circle {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .connection-status {
+    font-size: 0.7rem;
+  }
+  
+  .logout-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 10px;
+  }
+  
+  .logo-section h1 {
+    font-size: 1.4rem;
+  }
+  
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .nav-tabs {
+    bottom: 15px;
+    padding: 6px;
+    gap: 4px;
+  }
+  
+  .nav-tab {
+    padding: 10px 12px;
+  }
+  
+  .tab-icon {
+    font-size: 1rem;
+  }
+  
+  .address-circle {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
 }

@@ -450,4 +450,87 @@ input[type="file"] {
   .drop-zone {
     padding: 40px 20px;
   }
+  
+  .upload-card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .upload-description {
+    font-size: 1rem;
+  }
+  
+  .drop-main {
+    font-size: 1.1rem;
+  }
+  
+  .browse-btn {
+    font-size: 1rem;
+  }
+  
+  .file-metadata {
+    padding: 20px;
+  }
+  
+  .metadata-input {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+  
+  .upload-btn {
+    padding: 18px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-card {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+  
+  .upload-card h2 {
+    font-size: 1.6rem;
+  }
+  
+  .drop-zone {
+    padding: 30px 15px;
+  }
+  
+  .upload-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .file-preview {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .file-info {
+    align-items: center;
+  }
+  
+  .file-name {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .metadata-input {
+    padding: 12px 16px;
+  }
+  
+  .input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .visibility-toggle {
+    justify-content: center;
+  }
+  
+  .upload-btn {
+    padding: 16px 24px;
+    font-size: 0.95rem;
+  }
 }

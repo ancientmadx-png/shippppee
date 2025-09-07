@@ -387,5 +387,97 @@
   
   .explorer-controls {
     flex-direction: column;
+    gap: 12px;
+  }
+  
+  .explorer-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .public-explorer h2 {
+    font-size: 1.8rem;
+  }
+  
+  .search-input,
+  .filter-select {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+  
+  .search-input {
+    min-width: auto;
+  }
+  
+  .file-content {
+    height: 160px;
+  }
+  
+  .file-actions {
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .action-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .public-explorer {
+    padding: 20px 15px;
+    margin: 0 10px;
+  }
+  
+  .public-explorer h2 {
+    font-size: 1.6rem;
+  }
+  
+  .explorer-description {
+    font-size: 1rem;
+  }
+  
+  .refresh-btn {
+    padding: 10px;
+  }
+  
+  .search-input,
+  .filter-select {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .file-header {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .file-owner {
+    align-items: flex-start;
+  }
+  
+  .file-content {
+    height: 140px;
+  }
+  
+  .file-info {
+    padding: 16px;
+  }
+  
+  .file-title {
+    font-size: 1rem;
+  }
+  
+  .file-actions {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 }

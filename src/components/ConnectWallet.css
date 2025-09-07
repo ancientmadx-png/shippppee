@@ -328,11 +328,26 @@
   .features-grid {
     grid-template-columns: 1fr;
   }
+  
+  .connect-header-bar {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-to-landing {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .connect-wallet-page {
+    padding: 20px 10px;
+  }
+  
   .connect-container {
     padding: 30px 20px;
+    gap: 30px;
   }
   
   .connect-header h2 {
@@ -341,5 +356,108 @@
   
   .connect-right h3 {
     font-size: 1.5rem;
+  }
+  
+  .connect-header-bar {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .back-to-landing {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .wallet-btn {
+    padding: 16px 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .wallet-name {
+    font-size: 1rem;
+  }
+  
+  .metamask-warning,
+  .network-warning {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .install-metamask-btn,
+  .switch-network-btn {
+    margin-left: 0;
+    align-self: center;
+  }
+  
+  .features-grid {
+    gap: 16px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-wallet-page {
+    padding: 15px 5px;
+  }
+  
+  .connect-container {
+    padding: 20px 15px;
+    gap: 25px;
+  }
+  
+  .connect-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .connect-header p {
+    font-size: 1rem;
+  }
+  
+  .connect-right h3 {
+    font-size: 1.3rem;
+  }
+  
+  .wallet-btn {
+    padding: 14px 16px;
+  }
+  
+  .wallet-icon {
+    font-size: 1.3rem;
+  }
+  
+  .wallet-name {
+    font-size: 0.95rem;
+  }
+  
+  .feature-card {
+    padding: 16px;
+  }
+  
+  .feature-icon {
+    font-size: 1.8rem;
+  }
+  
+  .feature-content h4 {
+    font-size: 0.9rem;
+  }
+  
+  .feature-content p {
+    font-size: 0.8rem;
+  }
+  
+  .connect-credits {
+    bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -445,24 +445,30 @@
   
   .files-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .controls-section {
     flex-direction: column;
+    gap: 16px;
   }
 
   .search-controls {
     width: 100%;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .file-actions-bar {
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .file-header {
     gap: 12px;
     padding: 12px 16px;
+    flex-wrap: wrap;
   }
 
   .file-type-badge,
@@ -478,11 +484,93 @@
   .file-actions {
     gap: 6px;
     padding: 10px 12px;
+    flex-wrap: wrap;
   }
 
   .action-btn {
     padding: 6px 10px;
     font-size: 0.8rem;
     min-width: 70px;
+    flex: 1;
+  }
+  
+  .manager-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .file-manager h2 {
+    font-size: 1.8rem;
+  }
+  
+  .search-input,
+  .filter-select,
+  .sort-select {
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+  
+  .refresh-btn {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-manager {
+    padding: 15px 10px;
+    margin: 0 5px;
+  }
+  
+  .file-manager h2 {
+    font-size: 1.6rem;
+  }
+  
+  .manager-description {
+    font-size: 1rem;
+  }
+  
+  .files-grid {
+    gap: 16px;
+  }
+  
+  .file-card {
+    border-radius: 16px;
+  }
+  
+  .file-header {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  
+  .file-content {
+    height: 160px;
+  }
+  
+  .file-info {
+    padding: 16px;
+  }
+  
+  .file-title {
+    font-size: 1rem;
+  }
+  
+  .file-actions {
+    padding: 8px 10px;
+    gap: 4px;
+  }
+  
+  .action-btn {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    min-width: 60px;
+  }
+  
+  .search-input,
+  .filter-select,
+  .sort-select {
+    padding: 12px 16px;
+    font-size: 0.95rem;
   }
 }

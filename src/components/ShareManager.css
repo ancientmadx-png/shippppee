@@ -347,6 +347,7 @@
   
   .input-group {
     flex-direction: column;
+    gap: 16px;
   }
   
   .address-input {
@@ -357,5 +358,95 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+  
+  .share-manager h2 {
+    font-size: 2rem;
+  }
+  
+  .share-description {
+    font-size: 1.1rem;
+  }
+  
+  .section-card {
+    padding: 24px;
+  }
+  
+  .section-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .address-input {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+  
+  .grant-btn {
+    padding: 16px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .share-manager {
+    padding: 20px 15px;
+    margin: 15px 10px;
+  }
+  
+  .share-manager h2 {
+    font-size: 1.8rem;
+  }
+  
+  .share-description {
+    font-size: 1rem;
+  }
+  
+  .section-card {
+    padding: 20px;
+  }
+  
+  .section-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .section-card p {
+    font-size: 1rem;
+  }
+  
+  .address-input {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+  
+  .grant-btn {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .access-item {
+    padding: 20px;
+    gap: 12px;
+  }
+  
+  .address-display {
+    font-size: 1rem;
+  }
+  
+  .revoke-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    align-self: stretch;
+  }
+  
+  .no-access {
+    padding: 48px 20px;
+  }
+  
+  .no-access h4 {
+    font-size: 1.5rem;
+  }
+  
+  .no-access p {
+    font-size: 1rem;
   }
 }
